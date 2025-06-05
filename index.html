@@ -29,9 +29,8 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                         <li class="nav-item"><a class="nav-link me-lg-3" href="#features">Features</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Start Now</a></li> -->
                     </ul>
-                    <button class="btn btn-secondary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                    <button class="btn btn-secondary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#trialRequestModal">
                         <span class="d-flex align-items-center">
                             <i class="bi-chat-text-fill me-2"></i>
                             <span class="small">Request a Trial</span>
@@ -52,7 +51,7 @@
                             <div class="d-flex flex-column flex-lg-row align-items-center">
                                 <!-- <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a> -->
                                 <!-- <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a> -->
-                                <a class="btn btn-lg btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#feedbackModal">Try Now!</a>
+                                <a class="btn btn-lg btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#trialRequestModal">Try Now!</a>
                                 &nbsp;
                                 <a class="btn btn-lg btn-outline-secondary rounded-pill rounded-pill" href="#features">Learn More</a>
                                 <br>
@@ -444,7 +443,6 @@
             </div>
             </div>
         </section>
-
         <section class="bg-light">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
@@ -467,7 +465,7 @@
                         <br />
                         Start building.
                     </h2>
-                    <button class="btn btn-outline-light py-3 px-4 rounded-pill" data-bs-toggle="modal" data-bs-target="#feedbackModal">Try it now!</button >
+                    <button class="btn btn-outline-light py-3 px-4 rounded-pill" data-bs-toggle="modal" data-bs-target="#trialRequestModal">Try it now!</button >
                     <button class="btn btn-outline-light py-3 px-4 rounded-pill" data-bs-toggle="modal" data-bs-target="#questionModal">Ask a Question</button >
                 </div>
             </div>
@@ -485,67 +483,54 @@
                 </div>
             </div>
         </footer>
-        <!-- Feedback Modal-->
-        <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+        <!-- trialRequest Modal-->
+        <div class="modal fade" id="trialRequestModal" tabindex="-1" aria-labelledby="trialRequestModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary-to-secondary p-4">
-                        <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Request your month-long trial</h5>
+                        <h5 class="modal-title font-alt text-white" id="trialRequestModalLabel">Request your month-long trial</h5>
                         <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body border-0 p-4">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form id="trialRequestForm" action="https://formsubmit.co/29c88e66d880d216b0394e4edb3463dd" method="POST">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                                 <label for="name">Full name</label>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <!-- Business Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="bizname" type="text" placeholder="Name of your business..." data-sb-validations="required" />
+                                <input class="form-control" id="bizname" name="bizname" type="text" placeholder="Name of your business..." data-sb-validations="required" />
                                 <label for="bizname">Business name</label>
                                 <div class="invalid-feedback" data-sb-feedback="bizname:required">Business name is required.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
                                 <label for="email">Email address</label>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                             <!-- Phone number input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
                                 <label for="phone">Phone number</label>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations=""></textarea>
+                                <textarea class="form-control" id="message" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations=""></textarea>
                                 <label for="message">Message</label>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
                             <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
                                     <div class="fw-bolder">Your request has been submitted successfully!</div>
                                 </div>
                             </div>
                             <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
                             <div class="d-grid"><button class="btn btn-secondary rounded-pill btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
@@ -554,67 +539,54 @@
                 </div>
             </div>
         </div>
-        <!-- Feedback Modal-->
+        <!-- Question Modal-->
         <div class="modal fade" id="questionModal" tabindex="-1" aria-labelledby="questionModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary-to-secondary p-4">
-                        <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Ask your question here</h5>
+                        <h5 class="modal-title font-alt text-white" id="questionModalLabel">Ask your question here</h5>
                         <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body border-0 p-4">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form id="questionForm" action="https://formsubmit.co/29c88e66d880d216b0394e4edb3463dd" method="POST">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                                 <label for="name">Full name</label>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <!-- Business Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="bizname" type="text" placeholder="Name of your business..." data-sb-validations="required" />
+                                <input class="form-control" id="bizname" name="bizname" type="text" placeholder="Name of your business..." data-sb-validations="required" />
                                 <label for="bizname">Business name</label>
                                 <div class="invalid-feedback" data-sb-feedback="bizname:required">Business name is required.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
                                 <label for="email">Email address</label>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required for us to respond to your question .</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                             <!-- Phone number input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
                                 <label for="phone">Phone number</label>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required for us to respond to your question.</div>
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="question" type="text" placeholder="Enter your question here..." style="height: 10rem" data-sb-validations=""></textarea>
+                                <textarea class="form-control" id="question" name="question" type="text" placeholder="Enter your question here..." style="height: 10rem" data-sb-validations=""></textarea>
                                 <label for="question">Questions</label>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A question is required.</div>
                             </div>
                             <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
                                     <div class="fw-bolder">Your request has been submitted successfully!</div>
                                 </div>
                             </div>
                             <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
                             <div class="d-grid"><button class="btn btn-secondary rounded-pill btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
@@ -627,10 +599,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
