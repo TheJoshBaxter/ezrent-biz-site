@@ -483,7 +483,8 @@
                 </div>
             </div>
         </footer>
-        <!-- trialRequest Modal-->
+
+        <!-- trialRequest Modal -->
         <div class="modal fade" id="trialRequestModal" tabindex="-1" aria-labelledby="trialRequestModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -493,52 +494,41 @@
                     </div>
                     <div class="modal-body border-0 p-4">
                         <form id="trialRequestForm" action="https://formsubmit.co/29c88e66d880d216b0394e4edb3463dd" method="POST">
-                            <!-- Name input-->
+                            <!-- Full name -->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required> 
                                 <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
-                            <!-- Business Name input-->
+                            <!-- Business name -->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="bizname" name="bizname" type="text" placeholder="Name of your business..." data-sb-validations="required" />
+                                <input class="form-control" id="bizname" name="bizname" type="text" placeholder="Name of your business..." required>
                                 <label for="bizname">Business name</label>
-                                <div class="invalid-feedback" data-sb-feedback="bizname:required">Business name is required.</div>
                             </div>
-                            <!-- Email address input-->
+                            <!-- Email address -->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" required>
                                 <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
-                            <!-- Phone number input-->
+                            <!-- Phone number -->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required>
                                 <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                             </div>
-                            <!-- Message input-->
+                            <!-- Message -->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations=""></textarea>
+                                <textarea class="form-control" id="message" name="message" placeholder="Enter your message here..." style="height: 10rem" required></textarea>
                                 <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
-                            <!-- Submit success message-->
-                            <div class="d-none" id="submitTrialRequestSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Your request has been submitted successfully!</div>
-                                </div>
+                            <!-- Submit Button -->
+                            <div class="d-grid">
+                                <button class="btn btn-secondary rounded-pill btn-lg" id="submitTrialRequestButton" type="submit">Submit</button>
                             </div>
-                            <!-- Submit error message-->
-                            <div class="d-none" id="submitTrialRequestErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-secondary rounded-pill btn-lg disabled" id="submitTrialRequestButton" type="submit">Submit</button></div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+        
         <!-- Question Modal-->
         <div class="modal fade" id="questionModal" tabindex="-1" aria-labelledby="questionModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -549,47 +539,35 @@
                     </div>
                     <div class="modal-body border-0 p-4">
                         <form id="questionForm" action="https://formsubmit.co/29c88e66d880d216b0394e4edb3463dd" method="POST">
-                            <!-- Name input-->
+                            <!-- Name input -->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                <input class="form-control" id="qname" name="qname" type="text" placeholder="Enter your name..." required>
+                                <label for="qname">Full name</label>
                             </div>
-                            <!-- Business Name input-->
+                            <!-- Business Name input -->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="bizname" name="bizname" type="text" placeholder="Name of your business..." data-sb-validations="required" />
-                                <label for="bizname">Business name</label>
-                                <div class="invalid-feedback" data-sb-feedback="bizname:required">Business name is required.</div>
+                                <input class="form-control" id="qbizname" name="qbizname" type="text" placeholder="Name of your business..." required>
+                                <label for="qbizname">Business name</label>
                             </div>
-                            <!-- Email address input-->
+                            <!-- Email address input -->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required for us to respond to your question .</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                <input class="form-control" id="qemail" name="qemail" type="email" placeholder="name@example.com" required>
+                                <label for="qemail">Email address</label>
                             </div>
-                            <!-- Phone number input-->
+                            <!-- Phone number input -->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required for us to respond to your question.</div>
+                                <input class="form-control" id="qphone" name="qphone" type="tel" placeholder="(123) 456-7890" required>
+                                <label for="qphone">Phone number</label>
                             </div>
-                            <!-- Message input-->
+                            <!-- Message input -->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="question" name="question" type="text" placeholder="Enter your question here..." style="height: 10rem" data-sb-validations=""></textarea>
+                                <textarea class="form-control" id="question" name="question" placeholder="Enter your question here..." style="height: 10rem" required></textarea>
                                 <label for="question">Questions</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A question is required.</div>
                             </div>
-                            <!-- Submit success message-->
-                            <div class="d-none" id="submitQuestionSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Your request has been submitted successfully!</div>
-                                </div>
+                            <!-- Submit Button -->
+                            <div class="d-grid">
+                                <button class="btn btn-secondary rounded-pill btn-lg" id="submitQuestionButton" type="submit">Submit</button> <!-- Removed 'disabled' class -->
                             </div>
-                            <!-- Submit error message-->
-                            <div class="d-none" id="submitQuestionErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-secondary rounded-pill btn-lg disabled" id="submitQuestionButton" type="submit">Submit</button></div>
                         </form>
                     </div>
                 </div>
